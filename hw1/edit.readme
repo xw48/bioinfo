@@ -1,0 +1,13 @@
+The edit.py performs the edit distance calculation between two sequences.
+
+The main functions of edit.py are:
+1) import_data(ifile)
+   Read FASTA file and return an array of sequences
+
+2) edit(str1, str2)
+   Calculate edit distance between str1 and str2 with dynamic programming
+
+Command line:
+./edit.py $FILE_NAME
+
+e.g., ./edit.py sample.fasta

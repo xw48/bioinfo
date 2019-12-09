@@ -1,0 +1,12 @@
+
+# I529-xw48-hw2
+
+1) Building markov model with:
+   ./build_model.py <order> <input file>
+
+2) Predict unknown sequence with:
+   ./predict.py <unknown_file> <model #1> <model #2>
+
+3) evaluate accuracy of markov model with:
+   ./evaluate.py <sampling #> <model #1> <model #2>, where sampling # is the no of sub-sequences used in evaluation
+   

@@ -1,0 +1,58 @@
+The CpGIsland.py file makes use of viterbi algorithm to predict existence of CpG Island.
+
+Run it with:
+'./CpGIslandScan.py <hmm model path> <test case>'
+where <hmm model path> is the path to CpGisland-hmm.par, and <test case> is the file to be tested.
+
+In our experiment, we test the program with "CpGIsland.fasta", and successfully predicted 50 possible CpG island in the sequence. The sizes of CpG island range from 64 to 2901.
+
+CpGIsland [221, 588], Len 367
+CpGIsland [2282, 2514], Len 232
+CpGIsland [3046, 3124], Len 78
+CpGIsland [4571, 5247], Len 676
+CpGIsland [6578, 6858], Len 280
+CpGIsland [8841, 9477], Len 636
+CpGIsland [9643, 10051], Len 408
+CpGIsland [10257, 10581], Len 324
+CpGIsland [13275, 13612], Len 337
+CpGIsland [14055, 14885], Len 830
+CpGIsland [16117, 16460], Len 343
+CpGIsland [17112, 17792], Len 680
+CpGIsland [17872, 18132], Len 260
+CpGIsland [18379, 18549], Len 170
+CpGIsland [18677, 18822], Len 145
+CpGIsland [19022, 19374], Len 352
+CpGIsland [19565, 20312], Len 747
+CpGIsland [20464, 20624], Len 160
+CpGIsland [21005, 21168], Len 163
+CpGIsland [21749, 21889], Len 140
+CpGIsland [22385, 22571], Len 186
+CpGIsland [23018, 23089], Len 71
+CpGIsland [23307, 23953], Len 646
+CpGIsland [26229, 26307], Len 78
+CpGIsland [26597, 27120], Len 523
+CpGIsland [30537, 31240], Len 703
+CpGIsland [36388, 36538], Len 150
+CpGIsland [36640, 37106], Len 466
+CpGIsland [37974, 40875], Len 2901
+CpGIsland [41223, 41436], Len 213
+CpGIsland [42655, 45254], Len 2599
+CpGIsland [45669, 46836], Len 1167
+CpGIsland [46929, 48385], Len 1456
+CpGIsland [48536, 49058], Len 522
+CpGIsland [53343, 54255], Len 912
+CpGIsland [54456, 56170], Len 1714
+CpGIsland [56605, 59398], Len 2793
+CpGIsland [59516, 59580], Len 64
+CpGIsland [60420, 61158], Len 738
+CpGIsland [63724, 64773], Len 1049
+CpGIsland [65736, 65892], Len 156
+CpGIsland [69720, 69923], Len 203
+CpGIsland [70336, 72736], Len 2400
+CpGIsland [72979, 73979], Len 1000
+CpGIsland [74471, 76673], Len 2202
+CpGIsland [77232, 77547], Len 315
+CpGIsland [79373, 79701], Len 328
+CpGIsland [80267, 80612], Len 345
+CpGIsland [83956, 84056], Len 100
+CpGIsland [84316, 84589], Len 273

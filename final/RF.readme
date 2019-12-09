@@ -1,0 +1,2 @@
+1) compile with: javac -cp ".:weka.jar" RF.java
+2) run with: java -cp ".:weka.jar" RF

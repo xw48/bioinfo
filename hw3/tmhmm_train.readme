@@ -1,0 +1,17 @@
+The 'tmhmm_train.py' handles problem 2.3.1: parsing mttopo.txt file, and retrieving length distribution and 1-order Markov model for each hidden state.
+
+The key componets of this file are:
+1) GHMM::import_train_data
+	parsing mttopo.txt file. String information for hidden states is stored in a dictionary
+
+2) GHMM.__init__
+	initializing parameters for GHMM model
+
+3) class Markov
+	building 1-order markov model
+
+To run the program:
+	./tmhmm_train.py <train_file>
+	where <train_file> is the Membrane Protein Topology Database, i.e., mttopo.txt
+
+This program, by default, generates verbose output for each Markov model. 

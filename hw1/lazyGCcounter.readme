@@ -1,0 +1,23 @@
+The lazyGCcounter.py calculates GC% with random sampling.
+
+The main functions are: 
+1) import_data(ifile)
+   Read FASTA file and return an array of sequences
+
+2) lazyGC(istr, w, t)
+   Randomly sample from "istr" with window size "w" for "t" times, and return GC%
+
+Command line:
+././lazyGCcounter.py $FILE -w <window> -t <times>
+
+e.g., ./lazyGCcounter.py NC_010698.fna -w 10000 -t 100
+
+
+Experiments:
+2 We run both "-w 50 -t 100" and "-w 10000 -t 100" for 10 times, and the GC% distributions are:
+
+GC%                         1         2         3         4         5         6         7         8         9         10      STD
+"-w 50 -t 100"		0.382600  0.376200  0.391600  0.375400  0.378800  0.392000  0.395800  0.399600  0.385000  0.376200  0.008441
+"-w 10000 -t 100"	0.390335  0.388778  0.388498  0.391279  0.388311  0.389543  0.389570  0.387352  0.389728  0.391973  0.001326
+
+From the above data, we found the distribution of "-w 50 -t 100" is less stable than "-w 10000 -t 100". The standard deviation of former is 0.008441, while the latter is only 0.001326, which means: the more sampled data, the more accurate is the GC%.

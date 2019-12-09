@@ -1,0 +1,6 @@
+The build_model.py builds the morkov model and dumps it to a file.
+
+The main functions of build_model.py is Model class, which is responsible to learn initial probabilities and transitioning probabilities from sequence data.
+
+Command line:
+./build_model.py <order> <input file>

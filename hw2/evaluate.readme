@@ -1,0 +1,20 @@
+The evaluate.py file is used to evaluate accuracy of markov model.
+
+Essentially, our evaluation experiments are conducted in following steps:
+1) randomly sampling from training data, and get N sub-sequences
+2) labeling each sub-sequences with trained model
+
+The design of testing examples: as in evaluate.py, we randomly choose a training data (DNA data for a certain species), and truncate a segment (of length 1000) at a random offset. To collect N testing examples, repeat the above operation for N times. 
+
+How to evaluate the markov model: for each order R, we build two markov chain model based on the training data, model_coli and model_pylori for instance. Afterwards, we predict the species for the N testing examples. That is, for each order R, we get a confusion matrix. We evaluate the accuracy of markov chanin model using average accuracy (tp+tn)/(tp+tn+fp+fn)
+
+The confusion matrix and average accuracy for each order is:
+Order=1: matrix [[488, 4], [22, 486]], accuracy 0.974000
+Order=2: matrix [[472, 1], [10, 517]], accuracy 0.989000
+Order=3: matrix [[529, 1], [1, 469]], accuracy 0.998000
+Order=4: matrix [[487, 0], [4, 509]], accuracy 0.996000
+Order=5: matrix [[484, 1], [0, 515]], accuracy 0.999000
+Order=6: matrix [[491, 2], [1, 506]], accuracy 0.997000
+
+For this specific case, the above result indicates that accuracy of markov chain is optimized when order>=3.
+

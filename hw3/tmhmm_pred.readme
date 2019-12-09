@@ -1,0 +1,42 @@
+The 'tmhmm_pred.py' handles problem 2.3.2: parsing mttopo.txt file, retrieving length distribution and 1-order Markov model for each hidden state, and further predict transmembrane domains in a query protein sequences
+
+The key componets of this file are:
+1) GHMM::import_train_data
+	parsing mttopo.txt file. String information for hidden states is stored in a dictionary
+
+2) GHMM.__init__
+	initializing parameters for GHMM model
+
+3) class Markov
+	building 1-order markov model
+
+4) GHMM.viterbi
+	predicting transmembrane domains in a query protein sequences with viterbi algorithm. In this function, for each observable protein symbol, we check previous symbols for an maximum. 
+
+To run the program:
+	./tmhmm_pred.py <train_file> <test_file>
+	where <train_file> is the Membrane Protein Topology Database, i.e., mttopo.txt, and <test_file> contains a string of protein symbols. 
+	e.g., ./tmhmm_pred.py mttopo.txt protein.fasta
+	A test file named "protein.fasta" is provided in this folder.
+
+For the test file "protein.fasta", our program generates a series of tuples like:
+[   ('IH', 47),
+    ('H', 71),
+    ('IH', 98),
+    ('H', 121),
+    ('IH', 143),
+    ('H', 167),
+    ('OH', 186),
+    ('H', 212),
+    ('OH', 235),
+    ('H', 258),
+    ('IH', 288),
+    ('H', 318),
+    ('IH', 347),
+    ('H', 374),
+    ('OH', 398),
+    ('H', 419),
+    ('IH', 449),
+    ('H', 470),
+    ('OH', 500)]
+ , where the first element is the hidden state, and the second element the index of observable protein symbol. 

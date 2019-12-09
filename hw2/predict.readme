@@ -1,0 +1,4 @@
+The predict.py loads several pre-built markov models from file, read a sequence from test file, and determines the most probable model. 
+
+Command line:
+./predict.py <unknown_file> <model #1> <model #2>
